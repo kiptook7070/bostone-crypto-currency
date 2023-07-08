@@ -1,0 +1,648 @@
+/*!
+Theme Name: Bostone
+Theme URI: https://accuratethemes.com/themes-wp/bostone
+Author: accuratethemes
+Author URI: https://www.templatemonster.com/authors/theme_ocean/
+Description: Bitcoin & Cryptocurrency ICO WordPress Theme
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bostone
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Bostone is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+- Forms
+## Layouts
+# Components
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: .375rem .75rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 0;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+/* Aditional Css */
+
+dl {
+  margin: 0 20px;
+}
+dd {
+	margin-bottom: 12px;
+}
+table {
+	border-bottom: 1px solid #ededed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 14px;
+	line-height: 2;
+	margin: 0 0 20px;
+	width: 100%;
+	text-align: center;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: center;
+}
+caption {
+	font-size: 16px;
+	margin: 0;
+	padding-top: 0;
+}
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td {
+    border-top: 1px solid #ededed;
+    padding: 6px 10px 6px 0;
+}
+tr{
+	 padding: 6px 10px 6px 0;
+}
+del {
+    color: #333;
+}
+select{
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+img{
+	display: block;
+	height: auto;
+}
+
+.navigation.pagination, 
+.navigation.pagination .nav-links{
+	width: 100%;
+}
+
+.pagination {}
+.pagination a,
+.pagination span{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #061b49;
+	color: #fff;
+	text-decoration: none;
+	margin: 0 5px;
+	border-radius: 4px;
+}
+.pagination span.page-numbers.current{
+	background-color: #0abe81;
+}
+.page-content .breadcrumb li{
+	color: #fff;
+}
+.comment-list{
+	padding-left: 0;
+}
+.comment-list li.comment{
+	list-style-type: none;
+}
+.comments__wrapper .children{
+	padding-left: 30px!important;
+}
+.entry-content{
+	margin-bottom: 35px;
+}
+#reply-title{
+	font-size: 24px;
+	margin-bottom: 1.5rem !important;
+	padding-top: 22px;
+}
+#reply-title small{
+	padding-left: 5px;
+}
+.form-submit #submit {
+	background: #007aff;
+	color: #fff;
+	padding: 10px 25px;
+	display: inline-block;
+	height: 50px;
+}
+#commentform textarea{
+	margin-bottom: 20px;
+}
+#commentform .form-group {
+	margin-bottom: 5px;
+}
+.comment-form-cookies-consent{
+	margin-top: 5px;
+}
+.comments__wrapper li:last-child .comment__item{
+	border-bottom: inherit;
+}
+
+.comments__wrapper .children li:last-child .comment__item{
+	border-bottom: 1px solid #e4e4e4;
+}
+.comment__item li li{
+	padding-left: 15px;
+}
+.comment__item ul,
+.comment__item ol{
+	margin-bottom: 10px;
+}
+body .entry-content .wp-block-cover-text{
+	color: #fff;
+}
+
+select {
+	border: 1px solid #ddd;
+	padding: 10px 12px;
+	background-color: #fff;
+}
+
+.widget select{
+	width: 100%;
+}
+.wp-block-button,
+.wp-block-cover {
+	margin-bottom: 15px;
+}
+
+.widget.widget_rss .widget__title a{
+	font-size: 24px;
+	line-height: 34px;
+	text-decoration: none;
+}
+.blog-section .post__content{
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.post__details .entry-content{
+	overflow: hidden;
+}
+.footer-widget.widget_block ul li a{
+	padding-left: 20px;
+}
+.footer-widget.widget_block li a:hover {
+    color: #fff;
+    padding-left: 25px;
+}
+.footer-about .social-icons-2 li a:before{
+	content: "";
+}
+.footer-about .social-icons-2 li a:hover {
+    padding: 5px;
+}
+.blog-section article{
+	margin-bottom: 30px;
+	display: block;
+}
+.entry-content a,
+.comment-respond a{
+	color: #536479;
+	text-decoration: none;
+}
+
+.page .entry-content{
+	margin-top: 0;
+}
+.entry-content img{
+	display: block;
+	max-width: 100%;
+}
+.blog_embed_code iframe{
+	width: 100%;
+	height: 222px;
+}
+.post_format-post-format-audio .blog_embed_code iframe{
+	width: 100%;
+	height: auto;
+}
+body.single .format-video .blog_embed_code iframe{
+	height: 400px;
+}
+
+body.single .blog_embed_code iframe{
+	margin-bottom: 30px;
+}
+.entry-content .wp-block-button__link{
+	color: #fff;
+}
+.entry-content li li{
+	padding-left: 15px;
+}
+.has-large-font-size{
+	line-height: normal;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6{
+	margin-bottom: 15px;
+}
+.wp-block-group__inner-container{
+	padding: 15px;
+}
+.wp-block-media-text{
+	margin-bottom: 15px;
+}
+.contact__form input[type="text"],
+.contact__form input[type="email"]{
+	border-top: inherit;
+	border-left: inherit;
+	border-right: inherit;
+	padding: 0 ;
+}
+.con_info_area{
+	padding-bottom: 85px;
+}
+.table.trade-table img{
+	display: inline-block;
+}
+.pricing-charts-section .bottom-shape-2 img{
+	height: 100%;
+}
+
+.unset-img img{
+	max-width: unset !important;
+}
+
+.footer-bottom .quick-links li{
+	display: inline-block;
+}
+.benifit__card-thumb img{
+	width: 70px;
+}
+.widget.footer-widget{
+	margin-bottom: 0;
+}
+.widget.footer-widget p,
+.widget.footer-widget input[type="email"]{
+	margin-bottom: 12px;
+}
+.widget.footer-widget input[type="email"]{
+	height: 50px;
+}
+.widget.footer-widget button{
+	border-radius: 4px;
+	margin-left: 0!important;
+}
+#mobile-menu{
+	display: none;
+}
+.customize-support .header-section {
+	padding: 10px 0;
+	margin-top: 30px;
+}
+@media (max-width: 991px) {
+	.nice-select.select-bar{
+		display: none;
+	}
+	#mobile-menu{
+		display: block;
+	}
+}
